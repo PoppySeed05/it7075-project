@@ -1,0 +1,73 @@
+{
+  "topic": "Fictional Harbor SOC procedures",
+  "questions": [
+    {
+      "id": "Q1",
+      "question": "What format should I save the original suspicious email in?",
+      "answerable": true,
+      "source": "01_phishing_intake.md",
+      "evidence": [
+        "Save the original message as an .eml file with full headers."
+      ]
+    },
+    {
+      "id": "Q2",
+      "question": "What should happen to active sessions after a compromised account password is reset?",
+      "answerable": true,
+      "source": "02_account_containment.md",
+      "evidence": [
+        "revoke active sessions after resetting the password"
+      ]
+    },
+    {
+      "id": "Q3",
+      "question": "What mailbox forwarding rules should an analyst look for?",
+      "answerable": true,
+      "source": "02_account_containment.md",
+      "evidence": [
+        "forwarding rules that send mail to an unfamiliar external address"
+      ]
+    },
+    {
+      "id": "Q4",
+      "question": "Which communication channel should remain available during endpoint network isolation?",
+      "answerable": true,
+      "source": "03_endpoint_response.md",
+      "evidence": [
+        "Network isolation should preserve the endpoint management channel."
+      ]
+    },
+    {
+      "id": "Q5",
+      "question": "What is the remediation target for a confirmed critical finding on an internet-facing asset?",
+      "answerable": true,
+      "source": "04_vulnerability_workflow.md",
+      "evidence": [
+        "the target is remediation within 72 hours"
+      ]
+    },
+    {
+      "id": "Q6",
+      "question": "What time standard should the incident timeline use?",
+      "answerable": true,
+      "source": "05_case_handoff.md",
+      "evidence": [
+        "Use UTC timestamps in the incident timeline."
+      ]
+    },
+    {
+      "id": "Q7",
+      "question": "What is the capital of France?",
+      "answerable": false,
+      "source": null,
+      "evidence": []
+    },
+    {
+      "id": "Q8",
+      "question": "How many days are raw authentication logs retained in the SOC archive?",
+      "answerable": false,
+      "source": null,
+      "evidence": []
+    }
+  ]
+}

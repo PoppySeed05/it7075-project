@@ -1,0 +1,15 @@
+configuration,changed,chunk_size,overlap,k,score_threshold,splitter_kind,metric,equivalent_max_distance,chunks,found,answerable_total,refused,unanswerable_total
+matched_500,none,500,100,4,0.45,fixed,cosine,0.55,30,6,6,2,2
+chunk_300,chunk_size,300,100,4,0.45,fixed,cosine,0.55,55,5,6,2,2
+chunk_600,chunk_size,600,100,4,0.45,fixed,cosine,0.55,25,3,6,2,2
+chunk_900,chunk_size,900,100,4,0.45,fixed,cosine,0.55,15,4,6,2,2
+k_1,k,500,100,1,0.45,fixed,cosine,0.55,30,0,6,2,2
+k_2,k,500,100,2,0.45,fixed,cosine,0.55,30,0,6,2,2
+k_8,k,500,100,8,0.45,fixed,cosine,0.55,30,0,6,2,2
+score_0.20,score_threshold,500,100,4,0.2,fixed,cosine,0.8,30,0,6,2,2
+score_0.30,score_threshold,500,100,4,0.3,fixed,cosine,0.7,30,0,6,2,2
+score_0.40,score_threshold,500,100,4,0.4,fixed,cosine,0.6,30,0,6,2,2
+score_0.50,score_threshold,500,100,4,0.5,fixed,cosine,0.5,30,0,6,2,2
+score_0.60,score_threshold,500,100,4,0.6,fixed,cosine,0.4,30,0,6,2,2
+score_0.75,score_threshold,500,100,4,0.75,fixed,cosine,0.25,30,0,6,2,2
+recursive_500,splitter_kind,500,100,4,0.45,recursive,cosine,0.55,26,5,6,2,2
