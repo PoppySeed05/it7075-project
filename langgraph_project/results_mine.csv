@@ -1,0 +1,8 @@
+configuration,profile,mode,compare_to,change,keyword_count,keywords,caught,missed,over_escalated,incident_total,routine_total,missed_ids,over_escalated_ids
+keyword_lecture,lecture5,keywords,,reference: course five-word rule,5,rce|ransomware|exfil|critical|admin,3,3,2,6,6,M04|M05|M06,M07|M08
+keyword_narrow,narrow2,keywords,keyword_lecture,keyword list only,2,rce|ransomware,2,4,1,6,6,M03|M04|M05|M06,M07
+keyword_wider,wider8,keywords,keyword_lecture,keyword list only,8,rce|ransomware|exfil|critical|admin|outbound|credential|mfa,4,2,3,6,6,M05|M06,M07|M08|M12
+keyword_widest,widest11,keywords,keyword_wider,keyword list only,11,rce|ransomware|exfil|critical|admin|outbound|credential|mfa|failed|scan|password,4,2,5,6,6,M05|M06,M07|M08|M09|M10|M12
+approval_wider,wider8,approval,keyword_wider,add context node and approval route,8,rce|ransomware|exfil|critical|admin|outbound|credential|mfa,4,2,1,6,6,M05|M06,M12
+context_wider,wider8,context,approval_wider,enable departed-account sign-in rule,8,rce|ransomware|exfil|critical|admin|outbound|credential|mfa,5,1,1,6,6,M06,M12
+context_widest,widest11,context,context_wider,keyword list only,11,rce|ransomware|exfil|critical|admin|outbound|credential|mfa|failed|scan|password,5,1,3,6,6,M06,M09|M10|M12

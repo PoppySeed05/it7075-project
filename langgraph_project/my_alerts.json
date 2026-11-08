@@ -1,0 +1,149 @@
+{
+  "about": "Twelve fictional alerts based on public alert types: six escalate and six close. The scenarios and labels are for this classroom experiment, not real organizational logs.",
+  "how_to_fill_this_in": {
+    "id": "Unique alert ID",
+    "alert": "Original scenario wording",
+    "expected": "Analyst label: escalate or close",
+    "note": "Reason for the label"
+  },
+  "extra_fields": "event_type, asset, account, change_id, and time_utc are simulated log fields used by the read-only context tool. expected and note are withheld from the graph.",
+  "hard_cases": [
+    "M05: incident with none of the eleven tested keywords",
+    "M07: approved lab exercise containing ransomware",
+    "M06: mailbox incident missed by every configuration"
+  ],
+  "alerts": [
+    {
+      "id": "M01",
+      "alert": "EDR detected ransomware rewriting finance documents on FIN-LT-04 while the employee was using the laptop.",
+      "expected": "escalate",
+      "note": "Files are being changed on a production laptop during normal use; this needs an immediate analyst review.",
+      "event_type": "file_encryption",
+      "asset": "FIN-LT-04",
+      "account": "finance.user",
+      "change_id": "",
+      "time_utc": "2026-10-20T10:30:00+00:00"
+    },
+    {
+      "id": "M02",
+      "alert": "A critical RCE alert on WEB-01 was followed by an unexpected process launched by the public web service.",
+      "expected": "escalate",
+      "note": "The unexpected child process adds evidence that the exposed service may have been exploited.",
+      "event_type": "web_exploit",
+      "asset": "WEB-01",
+      "account": "web.service",
+      "change_id": "",
+      "time_utc": "2026-10-20T10:30:00+00:00"
+    },
+    {
+      "id": "M03",
+      "alert": "Cloud audit logs show an admin role granted to a regular user without an approved change, and the user denies requesting it.",
+      "expected": "escalate",
+      "note": "An unapproved increase in access needs investigation, especially when the user denies the action.",
+      "event_type": "role_grant",
+      "asset": "CLOUD-TENANT",
+      "account": "cloud.user",
+      "change_id": "",
+      "time_utc": "2026-10-20T10:30:00+00:00"
+    },
+    {
+      "id": "M04",
+      "alert": "Repeated MFA prompts ended with a sign-in from an unfamiliar device, and the employee says they did not approve it.",
+      "expected": "escalate",
+      "note": "Repeated prompts plus an unfamiliar successful session suggest account misuse.",
+      "event_type": "sign_in",
+      "asset": "IDENTITY-PORTAL",
+      "account": "sales.user",
+      "change_id": "",
+      "time_utc": "2026-10-20T10:30:00+00:00"
+    },
+    {
+      "id": "M05",
+      "alert": "Successful VPN session for a departed employee; no current owner approved the activity.",
+      "expected": "escalate",
+      "note": "This account belongs to someone who left the organization. A successful session needs review even though no tested keyword appears.",
+      "event_type": "sign_in",
+      "asset": "VPN-GW",
+      "account": "former.staff",
+      "change_id": "",
+      "time_utc": "2026-10-20T10:30:00+00:00"
+    },
+    {
+      "id": "M06",
+      "alert": "A mailbox rule now sends copies of payroll messages to an unfamiliar personal inbox; the owner denies creating it.",
+      "expected": "escalate",
+      "note": "The rule could expose payroll information. None of the tested keywords appears, and the current context tool does not check forwarding destinations.",
+      "event_type": "mailbox_rule",
+      "asset": "MAIL-SERVICE",
+      "account": "payroll.user",
+      "change_id": "",
+      "time_utc": "2026-10-20T10:30:00+00:00"
+    },
+    {
+      "id": "M07",
+      "alert": "Ransomware test detection on LAB-WS-01 matched an authorized exercise; no production files were touched.",
+      "expected": "close",
+      "note": "The lab target, simulation event, and time match approved record CHG-1042. This is the routine alert that contains a keyword.",
+      "event_type": "edr_simulation",
+      "asset": "LAB-WS-01",
+      "account": "lab.tester",
+      "change_id": "CHG-1042",
+      "time_utc": "2026-10-20T10:30:00+00:00"
+    },
+    {
+      "id": "M08",
+      "alert": "Administrator installed a signed update on APP-02 during the approved maintenance window.",
+      "expected": "close",
+      "note": "The target, patch event, and time match approved record CHG-1043; this is expected maintenance.",
+      "event_type": "patch_install",
+      "asset": "APP-02",
+      "account": "patch.service",
+      "change_id": "CHG-1043",
+      "time_utc": "2026-10-20T10:30:00+00:00"
+    },
+    {
+      "id": "M09",
+      "alert": "One failed sign-in on a managed laptop was followed by a successful sign-in from the same device, and the employee confirmed a typing mistake.",
+      "expected": "close",
+      "note": "The single failure is explained by the user and followed by normal activity; there are no other suspicious signals in this example.",
+      "event_type": "sign_in",
+      "asset": "OFFICE-LT-02",
+      "account": "office.user",
+      "change_id": "",
+      "time_utc": "2026-10-20T10:30:00+00:00"
+    },
+    {
+      "id": "M10",
+      "alert": "The employee completed a password reset through the normal self-service page and confirmed the request with the help desk.",
+      "expected": "close",
+      "note": "The user confirmed a routine reset through the approved process.",
+      "event_type": "password_reset",
+      "asset": "IDENTITY-PORTAL",
+      "account": "office.user",
+      "change_id": "",
+      "time_utc": "2026-10-20T10:30:00+00:00"
+    },
+    {
+      "id": "M11",
+      "alert": "A scheduled backup finished with one skipped temporary folder, which the system owner confirmed was excluded from the backup plan.",
+      "expected": "close",
+      "note": "The warning matches an intended exclusion and does not describe a security incident.",
+      "event_type": "backup_warning",
+      "asset": "BACKUP-01",
+      "account": "backup.service",
+      "change_id": "",
+      "time_utc": "2026-10-20T10:30:00+00:00"
+    },
+    {
+      "id": "M12",
+      "alert": "MFA device registration matched the verified ticket for an employee replacement phone, and the employee confirmed the setup.",
+      "expected": "close",
+      "note": "The phone replacement was verified. The limited lookup tool only supports the lab exercise and patch approvals, so it cannot use this help-desk evidence.",
+      "event_type": "device_registration",
+      "asset": "IDENTITY-PORTAL",
+      "account": "office.user",
+      "change_id": "HD-2044",
+      "time_utc": "2026-10-20T10:30:00+00:00"
+    }
+  ]
+}
