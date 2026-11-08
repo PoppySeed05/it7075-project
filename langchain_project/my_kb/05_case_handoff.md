@@ -1,7 +1,3 @@
-# Harbor SOC: incident notes and shift handoff
-
-This original fictional guide explains how Harbor analysts make a case understandable to the next shift. Notes should allow another analyst to continue without guessing what has already been checked. Keep observations, interpretations, and planned actions separate. A short factual note is more useful than a confident conclusion with no supporting evidence.
-
 ## Build a readable timeline
 Use UTC timestamps in the incident timeline. Record the source's original timezone when converting a log entry, and preserve the original event identifier when available. Note both the event time and the time the analyst performed an action if those differ. Do not invent an exact timestamp when the only information available is a user's approximate recollection. Mark approximate times as estimates.
 

@@ -1,7 +1,3 @@
-# Harbor SOC: account compromise review
-
-This fictional procedure covers initial review of a potentially compromised account. The analyst first checks the report against sign-in records and contacts the user through a previously known channel. A message from the suspicious session is not sufficient identity verification. Separate what the user confirms from what the logs suggest.
-
 ## Contain an active session
 For a confirmed compromise, revoke active sessions after resetting the password. Follow the incident lead's authorization process for disabling access when activity is still ongoing. A password reset by itself may leave an existing session usable. Record the start and completion times of each containment action in the case. Do not claim that the account is safe just because one control reports success.
 

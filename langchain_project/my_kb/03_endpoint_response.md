@@ -1,7 +1,3 @@
-# Harbor SOC: endpoint alert triage
-
-This is a fictional training note for reviewing an endpoint detection alert. Start with the device name, logged-in account, alert time, and detection description. Confirm that the alert belongs to the device listed in the ticket. Check the sensor's last-seen time because a stale console view may not reflect the device's current condition.
-
 ## Understand the activity
 Review the process tree, including the parent process and command line. Compare the executable path, file signature, and hash with the user's reported activity. Record relevant network destinations and persistence observations. A reputation result is one clue, not a complete verdict. Known administration tools can be abused, and an unfamiliar hash can belong to a harmless new program.
 

@@ -1,7 +1,3 @@
-# Harbor SOC: suspicious email intake
-
-This is an original, fictional training procedure for a small security team. It describes how Harbor SOC organizes suspicious email reports.
-
 ## Preserve the report
 Save the original message as an .eml file with full headers. A screenshot can show what the user saw, but it does not preserve all the routing details or attachments. Record the reporting user's account, the message subject, the received time, and the incident ticket number. Keep the original message in the restricted case folder. Do not forward a suspicious attachment to coworkers as a way to ask for help.
 
