@@ -1,5 +1,0 @@
-# LangGraph alert triage
-
-This project completes the course LangGraph starter and tests a triage agent on twelve fictional alerts, with six marked escalate and six marked close. It compares keyword routing with a graph that checks approved changes and account status. The selected setting catches five incidents, misses one, and unnecessarily escalates one routine alert. The notebook saves all outputs, compares seven configurations, traces caught and missed alerts, and demonstrates memory by thread ID. It runs locally without an API key, model, or GPU. The alerts and explanations are an AI-assisted draft to review and personalize before submission; sources and limitations are documented in SOURCES.md and the notebook.
-
-Run `agent_notebook.ipynb` top to bottom beside `my_alerts.json`. Install once with `%pip install langgraph==1.2.19 ipykernel`, then restart the kernel. The install needs internet; the experiment does not. Tested with Python 3.12.14. Save outputs before committing. The separate walkthrough contains the full setup and recording steps.
